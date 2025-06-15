@@ -95,7 +95,7 @@ public class BezierCurveCollider_Editor : Editor {
         {
 
 			Vector3 start = bc.controlPoints[i];
-            Vector3 newPos = Handles.FreeMoveHandle(bc.controlPoints[i] + objPos, Quaternion.identity, .25f, Vector3.zero, Handles.ConeHandleCap) - objPos3D;
+            var fmh_98_83_638698782623118185 = Quaternion.identity; Vector3 newPos = Handles.FreeMoveHandle(bc.controlPoints[i] + objPos, .25f, Vector3.zero, Handles.ConeHandleCap) - objPos3D;
 
 			bc.controlPoints[i] = newPos;
 
@@ -141,7 +141,7 @@ public class BezierCurveCollider_Editor : Editor {
         {
             for (int i = 0; i < bc.handlerPoints.Count; i++)
             {
-                bc.handlerPoints[i] = Handles.FreeMoveHandle(bc.handlerPoints[i] + objPos, Quaternion.identity, .5f, Vector3.zero, Handles.ConeHandleCap) - objPos3D;
+                var fmh_144_92_638698782623148287 = Quaternion.identity; bc.handlerPoints[i] = Handles.FreeMoveHandle(bc.handlerPoints[i] + objPos, .5f, Vector3.zero, Handles.ConeHandleCap) - objPos3D;
             }
         }
         else
@@ -152,7 +152,7 @@ public class BezierCurveCollider_Editor : Editor {
                 // if there are only 2 control points
                 if (bc.controlPoints.Count == 2)
                 {
-                    bc.handlerPoints[i] = Handles.FreeMoveHandle(bc.handlerPoints[i] + objPos, Quaternion.identity, .5f, Vector3.zero, Handles.ConeHandleCap) - objPos3D;
+                    var fmh_155_96_638698782623152151 = Quaternion.identity; bc.handlerPoints[i] = Handles.FreeMoveHandle(bc.handlerPoints[i] + objPos, .5f, Vector3.zero, Handles.ConeHandleCap) - objPos3D;
                 }
                 // if there are more than 2 control points
                 else if (bc.controlPoints.Count > 2)
@@ -160,13 +160,13 @@ public class BezierCurveCollider_Editor : Editor {
                     // no additional calculations required for the first and last handler points
                     if (i == 0 || i == bc.handlerPoints.Count - 1)
                     {
-                        bc.handlerPoints[i] = Handles.FreeMoveHandle(bc.handlerPoints[i] + objPos, Quaternion.identity, .5f, Vector3.zero, Handles.ConeHandleCap) - objPos3D;
+                        var fmh_163_100_638698782623156402 = Quaternion.identity; bc.handlerPoints[i] = Handles.FreeMoveHandle(bc.handlerPoints[i] + objPos, .5f, Vector3.zero, Handles.ConeHandleCap) - objPos3D;
                     }
                     else
                     {
                         // changes for the rest of the handler points in the middle
                         Vector3 start = bc.handlerPoints[i];
-                        Vector3 newPos = Handles.FreeMoveHandle(bc.handlerPoints[i] + objPos, Quaternion.identity, .5f, Vector3.zero, Handles.ConeHandleCap) - objPos3D;
+                        var fmh_169_95_638698782623160596 = Quaternion.identity; Vector3 newPos = Handles.FreeMoveHandle(bc.handlerPoints[i] + objPos, .5f, Vector3.zero, Handles.ConeHandleCap) - objPos3D;
                         bc.handlerPoints[i] = newPos;
 
                         if (!start.Equals(newPos))
