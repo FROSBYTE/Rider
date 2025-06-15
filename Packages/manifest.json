@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.boxqkrtm.ide.cursor": "https://github.com/boxqkrtm/com.unity.ide.cursor.git",
     "com.unity.2d.animation": "9.1.2",
     "com.unity.2d.pixel-perfect": "5.0.3",
     "com.unity.2d.psdimporter": "8.0.5",
